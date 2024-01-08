@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+      text-align: center;
     }
 
     button {
@@ -31,29 +33,35 @@
   </style>
   <title>Button Example</title>
 </head>
+
 <body>
-<h1>pinjam seratus</h1>
-<button id="yesBtn">Ya</button>
-<button id="noBtn">Tidak</button>
+  <div class="">
+    <h1>pinjam seratus</h1>
+    <div class="btn"><button id="yesBtn">Ya</button>
+      <button id="noBtn">Tidak</button>
+    </div>
+  </div>
 
-<script>
-  document.getElementById('yesBtn').addEventListener('click', function() {
-    alert('Makasih');
-  });
 
-  document.getElementById('noBtn').addEventListener('click', function() {
-    moveButtonRandomly();
-  });
+  <script>
+    document.getElementById('yesBtn').addEventListener('click', function () {
+      alert('Makasih');
+    });
 
-  function moveButtonRandomly() {
-    const randomX = Math.random() * (window.innerWidth - 150);
-    const randomY = Math.random() * (window.innerHeight - 50);
+    document.getElementById('noBtn').addEventListener('click', function () {
+      moveButtonRandomly();
+    });
 
-    document.getElementById('noBtn').style.position = 'absolute';
-    document.getElementById('noBtn').style.left = `${randomX}px`;
-    document.getElementById('noBtn').style.top = `${randomY}px`;
-  }
-</script>
+    function moveButtonRandomly() {
+      const randomX = Math.random() * (window.innerWidth - 150);
+      const randomY = Math.random() * (window.innerHeight - 50);
+
+      document.getElementById('noBtn').style.position = 'absolute';
+      document.getElementById('noBtn').style.left = `${randomX}px`;
+      document.getElementById('noBtn').style.top = `${randomY}px`;
+    }
+  </script>
 
 </body>
+
 </html>
